@@ -3,11 +3,11 @@ var icon = document.getElementById("icon");
     icon.onclick = function(){
         document.body.classList.toggle("dark-mode");
         if(document.body.classList.contains("dark-mode")){
-            icon.src = "icon-sun.svg";
+            icon.src="icon-sun.svg";
             //change image too
 
         }else{
-            icon.src = "icon-moon.svg";
+            icon.src ="icon-moon.svg";
         }
     }
 
