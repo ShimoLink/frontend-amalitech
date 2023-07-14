@@ -1,0 +1,225 @@
+/*DESIGNING THE PAGE*/
+
+/*LIGHT MODE*/
+:root{
+    --primary-color: white;
+    --secondary-color: #e6e6e6;
+    --tertiary-color: #cacece;
+    --quaternary-color: #d9d9d9;
+    --quinary-color: #ededed;
+    --senary-color: #1e8eda;
+    --septenary-color: #9e9b9b;
+    --octonary-color: rgb(51, 51, 51);
+    --ninth-color: white;
+    --tenth-color: black;
+}
+
+/*DARK MODE*/
+.dark-mode {
+    --primary-color: #393A4B;
+    --secondary-color: #e6e6e6;
+    --tertiary-color: #cacece;
+    --quaternary-color: #25273D;
+    --quinary-color: #ededed;
+    --senary-color: #1e8eda;
+    --septenary-color: #9e9b9b;
+    --octonary-color: white;
+    --ninth-color: #25273D;
+    --tenth-color: white;
+    background-image: url("images/bg-desktop-dark.jpg");
+}
+
+/*TODO*/
+header{
+    font-weight: 700px;
+    margin-top: 70px;
+    color: white;
+}
+
+.moon-icon{
+    margin-left: 365px;
+}
+
+/*BODY COLOUR BY DEFAULT*/
+  body {
+      background-color: var(--ninth-color);
+      background-image: url("images/bg-desktop-light.jpg");
+      background-repeat: no-repeat;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 400px;
+      margin-left: 30%;
+      margin-right: 30%;
+  }
+
+/*DIVISION OF THE CREATE-TO-DO*/
+.create-todo-tab{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    width: 104%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+/*CREATE A NEW TO DO - INPUT BOX*/
+.create-todo-tab input[type=text] {
+    border: none;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    background-color: var(--primary-color);
+    flex: 1;
+    outline: none;
+    padding-left: 20px;
+    color: var(--tenth-color);
+}
+
+/*MAKING THE CIRCLE IN FRONT OF THE INPUT BOX A BUTTON TO ADD TASKS*/
+button{
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1px;
+    cursor: pointer;
+    outline: none;
+    padding-left: 30px;
+}
+.circle{
+    width: 30px;
+    height: 30px;
+}
+
+/*TODO LIST*/
+#todo-list {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    max-width: 550px;
+    padding: 20px;
+    width: 100%;
+}
+
+/*LIST - TODO LIST*/
+ul li {
+    padding-bottom: 30px;
+    list-style: none;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    color: var(--octonary-color);
+    padding-left: 30px;
+}
+
+ul li:hover{
+    color: var(--senary-color);
+}
+
+/*ADDING A CIRCLE BEFORE THE LIST*/
+ul li::before {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    left: -5%;
+}
+
+/*LIST WHEN CHECKED*/
+ul li.checked {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url("images/checked.png");
+}
+/*THE CLOSE BUTTON*/
+ul li span{
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+    font-size: 20px;
+    color: var(--octonary-color);
+}
+
+/*LOWER SECTION*/
+#lower-section{
+   background-color: var(--primary-color);
+   border-radius: 5px;
+   box-shadow: 0 50px 50px rgba(0, 0, 0, 0.15);
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   font-size: 15px;
+   padding-right: 23px;
+   color: var(--septenary-color);
+}
+
+/*LOWER SECTION - RANDOM STYLES TO IT*/
+/*hover the texts - becomes black*/
+#lower-section p:hover{
+    color: var(--octonary-color);
+}
+/*manual spaces between them*/
+ .larger-space{
+    padding-right: 95px;
+}
+.smaller-space{
+    padding-right: 20px;
+}
+/*colour of ALL permantent blue*/
+#all{
+    color: var(--senary-color);
+}
+
+/*FOOTER*/
+footer {
+    margin-top: 11%;
+    margin-bottom: 15%;
+    text-align: center;
+    font-size: 17px;
+    color: var(--septenary-color);
+}
+
+/* DRAG AND DROP STYLES */
+li.dragged {
+    opacity: 0.5;
+    /* Reduce opacity of dragged item */
+}
+ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--tertiary-color);
+    /* Line color */
+    pointer-events: none;
+    /* Ignore pointer events */
+}
+
+/* CROSS ICON STYLES */
+li {
+    position: relative;
+    /* Make the list items relative */
+}
+.cross-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+li:hover .cross-icon {
+    opacity: 1;
+    /* Show the cross icon on hover */
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!--LINK TO THE CSS FILE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> <!--LINK TO THE FONT-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <!--THE HEADING "TO DO"-->
+            <h1>T O D O <img class="moon-icon" id="icon" src="images/icon-moon.svg" alt="moon"></h1>
+            <!--MOON IMAGE-->
+           
+        </header>
+    <!--THE "CREATE A NEW TODO" SECTION-->
+    <div class="create-todo-tab">
+            <button onclick="addTask()"><img class="circle" src="images/unchecked.png" alt=""></button>
+            <input type="text" id="input-box" placeholder= "Create a new todo...">
+    </div>
+    <!--THE "TODO LIST" SECTION-->
+    <section>
+    <div id="todo-list">
+        <ul id="list-container">
+            <li draggable="true" class="checked">Complete online Javascript course<span class="cross-icon">
+                <img src="images/icon-cross.svg" alt="Cross Icon"></li>
+            <li draggable="true">Jog around the park 3x<span class="cross-icon">
+                <img src="images/icon-cross.svg" alt="Cross Icon"></li>
+            <li draggable="true">10 minutes meditation<span class="cross-icon">
+                <img src="images/icon-cross.svg" alt="Cross Icon"></li>
+            <li draggable="true">Read for 1 hour<span class="cross-icon">
+                <img src="images/icon-cross.svg" alt="Cross Icon"></li>
+            <li draggable="true">Pick up groceries<span class="cross-icon">
+                <img src="images/icon-cross.svg" alt="Cross Icon"></li>
+            <li draggable="true">Complete Todo App on Frontend Mentor<span class="cross-icon">
+                <img src="images/icon-cross.svg" alt="Cross Icon"></li>
+        </ul>
+    </div>
+    <!--LOW PART OF TODO LIST-->
+    <div id="lower-section">
+        <p><span class="smaller-space"></span>5 items left <span class="larger-space"></span></p>
+        <p id="all"><strong> All </strong><span class="smaller-space"></span></p>
+        <p><strong><span class="smaller-space">Active</span></strong></p>
+        <p><strong>Completed</strong></p>
+        <p><span class="larger-space"></span>Clear Completed<span class="smaller-space"></span></p>
+    </div>
+    </section>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <p>Drag and drop to reorder list</p>
+    </footer>
+</body>
+<script src="script.js"></script> <!--LINK TO THE JAVASCRIPT FILE-->
+</html>
