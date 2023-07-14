@@ -26,7 +26,7 @@
     --octonary-color: white;
     --ninth-color: #25273D;
     --tenth-color: white;
-    background-image: url("images/bg-desktop-dark.jpg");
+    background-image: url("bg-desktop-dark.jpg");
 }
 
 /*TODO*/
@@ -43,7 +43,7 @@ header{
 /*BODY COLOUR BY DEFAULT*/
   body {
       background-color: var(--ninth-color);
-      background-image: url("images/bg-desktop-light.jpg");
+      background-image: url("bg-desktop-light.jpg");
       background-repeat: no-repeat;
       font-family: 'Josefin Sans', sans-serif;
       font-weight: 400px;
@@ -125,7 +125,7 @@ ul li::before {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-image: url("images/unchecked.png");
+    background-image: url("unchecked.png");
     background-size: cover;
     background-position: center;
     left: -5%;
@@ -137,7 +137,7 @@ ul li.checked {
     text-decoration: line-through;
 }
 ul li.checked::before {
-    background-image: url("images/checked.png");
+    background-image: url("checked.png");
 }
 /*THE CLOSE BUTTON*/
 ul li span{
